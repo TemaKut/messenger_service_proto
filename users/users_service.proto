@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package service.users;
+
+option go_package = "github.com/TemaKut/messenger/pkg/service/models/users";
+
+
+service UsersService {
+    rpc CreateUser (CreateUserRequest) returns (CreateUserResponse);
+}
+
+message CreateUserRequest {
+    string name = 1;
+    string last_name = 2;
+}
+
+message CreateUserResponse {
+    string id = 1;
+}
