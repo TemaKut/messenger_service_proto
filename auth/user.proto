@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package service.auth;
+
+option go_package = "github.com/TemaKut/messenger/pkg/service/models/auth";
+
+import "google/protobuf/timestamp.proto";
+
+message User {
+    string id = 1;
+    string first_name = 2;
+    string last_name = 3;
+    string password_hash = 4;
+    repeated UserAvatar avatars = 5;
+    google.protobuf.Timestamp created_at = 6;
+    google.protobuf.Timestamp updated_at = 7;
+}
+
+
+message UserAvatar {
+    string url = 1;
+    uint32 sort = 2;
+}

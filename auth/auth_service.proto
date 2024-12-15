@@ -4,14 +4,14 @@ package service.auth;
 
 option go_package = "github.com/TemaKut/messenger/pkg/service/models/auth";
 
+import "auth/user.proto";
 
 service AuthService {
     rpc CreateUser (CreateUserRequest) returns (CreateUserResponse);
 }
 
 message CreateUserRequest {
-    string name = 1;
-    string last_name = 2;
+    User user = 1;
 }
 
 message CreateUserResponse {
