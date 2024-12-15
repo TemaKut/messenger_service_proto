@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-package service.users;
+package service.auth;
 
-option go_package = "github.com/TemaKut/messenger/pkg/service/models/users";
+option go_package = "github.com/TemaKut/messenger/pkg/service/models/auth";
 
 
-service UsersService {
+service AuthService {
     rpc CreateUser (CreateUserRequest) returns (CreateUserResponse);
 }
 
