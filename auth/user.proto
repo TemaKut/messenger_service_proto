@@ -10,10 +10,14 @@ message User {
     string id = 1;
     string first_name = 2;
     string last_name = 3;
-    string password_hash = 4;
-    repeated UserAvatar avatars = 5;
+    string phone = 4;
+    UserProps props = 5;
     google.protobuf.Timestamp created_at = 6;
     google.protobuf.Timestamp updated_at = 7;
+}
+
+message UserProps {
+    repeated UserAvatar avatars = 1;
 }
 
 
