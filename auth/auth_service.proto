@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package service.auth;
 
-option go_package = "github.com/TemaKut/messenger/pkg/service/models/auth";
+option go_package = "github.com/TemaKut/messenger/pkg/service/models/proto/auth";
 
 import "auth/user.proto";
 

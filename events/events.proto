@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package service.events;
+
+option go_package = "github.com/TemaKut/messenger/pkg/service/models/proto/events";
+
+import "google/protobuf/timestamp.proto";
+
+message Event {
+    reserved 1 to 20;
+
+    oneof event {
+        UserCreatedV1 user_created_v1 = 21;
+    }
+}
+
+
+message UserCreatedV1 {
+    string user_id = 1;
+    google.protobuf.Timestamp created_at = 2;
+}
