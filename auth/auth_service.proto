@@ -2,18 +2,17 @@ syntax = "proto3";
 
 package service.auth;
 
-option go_package = "github.com/TemaKut/messenger/pkg/service/models/proto/auth";
+option go_package = "github.com/TemaKut/messenger/pkg/proto/service/proto/auth";
 
-import "auth/user.proto";
 
 service AuthService {
-    rpc CreateUser (CreateUserRequest) returns (CreateUserResponse);
+    rpc InitSession (InitSessionRequest) returns (InitSessionResponse);
 }
 
-message CreateUserRequest {
-    User user = 1;
+message InitSessionRequest {
+    
 }
 
-message CreateUserResponse {
-    string id = 1;
+message InitSessionResponse {
+    
 }
