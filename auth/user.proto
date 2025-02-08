@@ -4,9 +4,11 @@ package service.auth;
 
 option go_package = "github.com/TemaKut/messenger/pkg/proto/service/gen/auth";
 
-message Session {
+message User {
     string id = 1;
-    string ip = 2;
-    string user_agent = 3;
-    bool is_active = 4;
+    string username = 2;
+    string first_name = 3;
+    string last_name = 4;
+    string email = 5;
+    string phone = 6;
 }
